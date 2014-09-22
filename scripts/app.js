@@ -1,4 +1,4 @@
-var app = angular.module("d2vnLive", []);
+var app = angular.module("d2vnLive", ["ngRoute"]);
 
 app.config(function($routeProvider) {
     $routeProvider

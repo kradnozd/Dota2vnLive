@@ -9,10 +9,6 @@ app.config(function($routeProvider) {
 		.when('/match/:matchId',
 		{
 			templateUrl: 'views/single-match.html',
-			controller: 'showMatchController'
+			controller: 'ShowMatchController'
 		})
-});
-
-app.controller('showMatchController', function($scope, $routeParams) {
-    $scope.match_id = $routeParams.matchId;
 });

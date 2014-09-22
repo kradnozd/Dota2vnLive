@@ -1,18 +1,22 @@
-var app = angular.module('d2vnLive', ['ngRoute']);
+var app = angular.module("d2vnLive", ["ngRoute"]);
 
-app .config(function($routeProvider) {
-	$routeProvider
-		.when('/match', {
-			templateUrl: '../view/single-match.html',
-			controller: 'showMatchController'
-		})
-		.otherwise({
-			redirectTo: '/'
-		});
+app.config(function($routeProvider) {
+    $routeProvider
+      .when('/',
+      {
+        templateUrl: "view/single-match.html",
+        controller: "AppCtrl"
+      })
+      .when('/pizza', {
+        template: "Yum!!"
+      }).otherwise({
+        template: "This doesn't exist!"
+      })
 });
 
-app .controller('showMatchController', function($scope){
-	$scope.model = {
-		message: "This is my app!";
-	}
+app.controller("AppCtrl", function($scope) {
+
+    $scope.model = {
+        message: "This is my app!!!"
+    }
 });

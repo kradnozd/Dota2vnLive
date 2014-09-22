@@ -1,6 +1,6 @@
-var d2vnLive = angular.module('d2vnLive', []);
+var app = angular.module('d2vnLive', ['ngRoute']);
 
-d2vnLive .config(['$routeProvider', function($routeProvider) {
+app .config(function($routeProvider) {
 	$routeProvider
 		.when('/match', {
 			templateUrl: '../view/single-match.html',
@@ -9,4 +9,10 @@ d2vnLive .config(['$routeProvider', function($routeProvider) {
 		.otherwise({
 			redirectTo: '/'
 		});
-}]);
+});
+
+app .controller('showMatchController', function($scope){
+	$scope.model = {
+		message: "This is my app!";
+	}
+});

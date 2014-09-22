@@ -12,3 +12,7 @@ app.config(function($routeProvider) {
 			controller: 'showMatchController'
 		})
 });
+
+app.controller('showMatchController', function($scope, $routeParams) {
+    $scope.match_id = $routeParams.matchId;
+});

@@ -4,11 +4,11 @@
 	<title>Dota 2 Live Tournament Matches Tracker</title>
 	<!-- CSS Temple -->
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css">
+	<link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body ng-app="d2vnLive">
 <header>
-	<nav class="navbar navbar-inverse" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -23,11 +23,20 @@
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
 </header>
+<!-- Content wrapper -->
+<section id="wrapper" ng-view>
+	<!-- Match Summary Section -->
+	<div>
+	</div>
+	<!-- Match Detail Section -->
+	<div>
+	</div>
+</section>
+<!-- End wrapper -->
 <!-- Scripts Palace -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

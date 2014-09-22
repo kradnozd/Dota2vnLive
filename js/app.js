@@ -2,15 +2,17 @@ var app = angular.module("d2vnLive", ["ngRoute"]);
 
 app.config(function($routeProvider) {
     $routeProvider
-      .when('/match',
-      {
-        templateUrl: "view/single-match.html",
-        controller: "showMatchController"
-      })
+    	.when('/', 
+    	{
+			templateUrl: "view/matches.html",	
+    	})
+		.when('/match/:matchId',
+		{
+			templateUrl: "view/single-match.html",
+			controller: "showMatchController"
+		})
 });
 
-app.controller("showMatchController", function($scope) {
-    $scope.model = {
-        message: "This is my app!!!"
-    }
+app.controller("showMatchController", function($scope, $routeParams) {
+    $scope.match_id = $routeParams.matchId;
 });

@@ -17,7 +17,8 @@ angular.module('d2vnLive')
 		  function(data){
 		  	console.log(data);
 		  	$scope.matches = data.query.results.result.games;
-		  	console.log($scope.matches);
+		  	
 		  }
 		);
+		console.log($scope.matches);
 	});

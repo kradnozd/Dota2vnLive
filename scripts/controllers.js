@@ -6,7 +6,7 @@ angular.module('d2vnLive')
 	})
 
 	.controller('ListMatchController', function($scope){
-		this.matches = null;
+		$scope.matches = null;
 
 		var url = 'http://api.steampowered.com/IDOTA2Match_570/GetLiveLeagueGames/v1/?key=23E1D8D923FF1144379D5042D60EE360&callback=?';
 		$.getJSON('http://query.yahooapis.com/v1/public/yql',
@@ -16,8 +16,8 @@ angular.module('d2vnLive')
 		  },
 		  function(data){
 		  	console.log(data);
-		  	this.matches = data.query.results.result;
-		  	this.matchNum = [0];
+		  	$scope.matches = data.query.results.result.games;
+		  	console.log($scope.matches);
 		  }
 		);
 	});

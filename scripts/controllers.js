@@ -17,7 +17,7 @@ angular.module('d2vnLive')
 		  function(data){
 		  	console.log(data);
 		  	$scope.matches = data.query.results.result;
-		  	i = [0];
+		  	$scope.matchNum = [0];
 		  }
 		);
 	});

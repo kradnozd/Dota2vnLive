@@ -4,7 +4,8 @@ app.config(function($routeProvider) {
     $routeProvider
     	.when('/', 
     	{
-			templateUrl: 'views/matches.html',	
+			templateUrl: 'views/matches.html',
+			controller: 'ListMatchController'
     	})
 		.when('/match/:matchId',
 		{

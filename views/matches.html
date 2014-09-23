@@ -1,6 +1,7 @@
 <div>
 	<h1>Matches List:</h1>
+
 	<ul ng-repeat="i in matchNum">
-		<li><a href="#match/{{matches[i].match_id}}">{{matches[i].match_id}}</a></li>
+		<li><a href="#match/{{matches.games[i].match_id}}">Match ID: {{matches.games[i].match_id}}</a></li>
 	</ul>
 </div>

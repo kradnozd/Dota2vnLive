@@ -18,4 +18,5 @@ angular.module('d2vnLive')
 			});
 		console.log($scope.matches);
 		console.log('Mission Done!');
+		console.log(url);
 	});
